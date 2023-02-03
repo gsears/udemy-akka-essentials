@@ -14,7 +14,7 @@ scalaVersion := "2.13.8"
 // It's possible to define many kinds of settings, such as:
 
 name := "udemy-akka-essentials"
-organization := "ch.epfl.scala"
+organization := "com.gjs.scala"
 version := "0.1"
 
 // Note, it's not required for you to define these three settings. These are
@@ -26,12 +26,23 @@ version := "0.1"
 // You can define other libraries as dependencies in your build like this:
 val akkaVersion = "2.5.32"
 
-// libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "2.1.1"
-
 libraryDependencies ++= Seq(
     "com.typesafe.akka" %% "akka-actor" % akkaVersion,
     "com.typesafe.akka" %% "akka-testkit" % akkaVersion,
-    "org.scalatest" %% "scalatest" % "3.0.8"
+    "org.scalatest" %% "scalatest" % "3.0.8",
+    // "org.scalameta" % "semanticdb-scalac" % "4.4.20"
+)
+
+
+scalacOptions ++= Seq(
+    "-deprecation",
+    // "-Ywarn-unused",
+    // "-Ywarn-unused-import",
+    // "-Ywarn-value-discard",
+    // "-Ywarn-dead-code",
+    // "-Ywarn-numeric-widen",
+    // "-Ywarn-infer-any",
+    // "-Yrangepos",
 )
 
 // Here, `libraryDependencies` is a set of dependencies, and by using `+=`,
