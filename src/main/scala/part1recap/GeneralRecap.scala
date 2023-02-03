@@ -13,7 +13,6 @@ object GeneralRecap {
     // code block
     val aCodeBlock = {
       if (aCondition) 74
-      56
       67
     }
 
@@ -89,7 +88,7 @@ object GeneralRecap {
     val pairs = for {
       num <- List(1, 2, 3) // if condition
       char <- List('a', 'b', 'c')
-    } yield num + "-" + char
+    } yield s"${num}-${char}"
 
     // List(1, 2, 3).flatMap(num => List('a', 'b', 'c').map(char => num + "-" + char))
     // pairs = List(1-a, 1-b, 1-c, 2-a, 2-b, 2-c, 3-a, 3-b, 3-c)
@@ -110,7 +109,7 @@ object GeneralRecap {
       case 1 => "first"
       case 2 => "second"
       case 3 => "third"
-      case _ => unknown + "th"
+      case _ => s"${unknown}th"
     }
 
     val bob = Person("Bob", 22)
