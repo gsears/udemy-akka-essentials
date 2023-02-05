@@ -18,7 +18,7 @@ import akka.actor.Props
   case class Decrement();
   case class Print();
 
-object ExerciseOne extends App {
+object Exercise1_1 extends App {
   val system = ActorSystem("actorSystem");
   val counter = system.actorOf(Props[Counter](), "counter")
   
